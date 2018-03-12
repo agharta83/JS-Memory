@@ -19,18 +19,19 @@ main {
   justify-content: center;
 }
 
-#chess > div {
+#chess > div.carte.cache {
   background-color: #c0c0c7;
-  float: left;
   width: 100px;
   height: 100px;
   margin: 5px;
   padding: 5px;
 }
 
-#chess div.image {
+#chess > div.image {
   background-color: white;
+  position: relative;
   width: 100px;
   height: 100px;
-  display: none;
+  margin: 5px;
+  padding: 5px;
 }
