@@ -6,11 +6,12 @@ var app = {
     // Propriétés du module app
     app.$chess = $('#chess');
     app.$cards = $('.carte');
+    app.$cardImage = $('.image');
 
     app.createChess();
     app.showCurrentCard();
     app.cardMouseOver();
-
+    app.generatePosition();
   },
 
     // Méthode pour créer le plateau
@@ -27,7 +28,7 @@ var app = {
         // J'intercepte le click sur la div que je viens d'ajouter au DOM
         $currentCard.on('click', app.showCurrentCard);
         // J'intercepte le mouseover sur la div que je viens d'ajouter au DOM
-        $currentCard.on('mouseenter, mouseleave', app.cardMouseOver);
+        $currentCard.on('mouseover, mouseout', app.cardMouseOver);
       }
     }
   },
@@ -44,15 +45,40 @@ var app = {
 
   // Méthode pour appliquer un gris plus foncé sur la carte lors du passage de la souris // TODO fait lagger le navigateur ?!
   cardMouseOver: function(event) {
-    console.log($(this));
-    $(this).mouseenter(function(){
+    // Lorsque la souris entre dans la div, ajoute la classe grey définit en css
+    $(this).mouseover(function(){
       $(this).addClass('grey');
     }),
-    $(this).mouseleave(function(){
+    // Lorsque la souris sort de la div enleve la classe grey
+    $(this).mouseout(function(){
       $(this).removeClass('grey');
     })
   },
-};
 
+  generatePosition: function () {
+    // Je créé le tableau qui va contenir mes valeurs de background-position
+    // L'axe x est toujours 0, l'axe y diminue de -100px a chaque image
+    // Initialisation des variables que je vais utiliser dans le tableau
+    var $top = 0;
+    var $arrayLength = 18;
+    var $cardImgPos = new Array();
+
+    for (var i = 0; i < $arrayLength; i++) {
+      $cardImgPos[i] = [$top];
+      // je soustrait 100 de la variable top
+      $top -= 100;
+    }
+    console.log($cardImgPos[0]);
+    // J'ajoute un background et un background-position a ma div
+    // TODO ne fonctionne pas
+    $('.image').css({
+      'background-image': "url('../images/cards.png')",
+      'background-position': '0 -100px'
+    });
+  },
+
+
+
+};
 // quand le DOM est chargé, on appelle la méthode app.init();
 $(app.init);
