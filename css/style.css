@@ -35,3 +35,7 @@ main {
   margin: 5px;
   padding: 5px;
 }
+
+#chess > div.carte.grey {
+  background-color: #777875;
+}

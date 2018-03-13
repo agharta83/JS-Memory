@@ -5,10 +5,12 @@ var app = {
     console.log('Memory init');
     // Propriétés du module app
     app.$chess = $('#chess');
-    app.$Card = $('.carte');
+    app.$cards = $('.carte');
 
     app.createChess();
     app.showCurrentCard();
+    app.cardMouseOver();
+
   },
 
     // Méthode pour créer le plateau
@@ -24,13 +26,15 @@ var app = {
         $currentCard.appendTo(app.$chess);
         // J'intercepte le click sur la div que je viens d'ajouter au DOM
         $currentCard.on('click', app.showCurrentCard);
+        // J'intercepte le mouseover sur la div que je viens d'ajouter au DOM
+        $currentCard.on('mouseenter, mouseleave', app.cardMouseOver);
       }
     }
   },
 
   // Méthode pour afficher l'image à l'event du click sur le plateau
   showCurrentCard: function(event) {
-    console.log($(this));
+
     // Au click, masquer .cache et afficher .image
     if($(this).hasClass('cache')) {
       $(this).removeClass('cache');
@@ -38,6 +42,16 @@ var app = {
     }
   },
 
+  // Méthode pour appliquer un gris plus foncé sur la carte lors du passage de la souris // TODO fait lagger le navigateur ?!
+  cardMouseOver: function(event) {
+    console.log($(this));
+    $(this).mouseenter(function(){
+      $(this).addClass('grey');
+    }),
+    $(this).mouseleave(function(){
+      $(this).removeClass('grey');
+    })
+  },
 };
 
 // quand le DOM est chargé, on appelle la méthode app.init();
