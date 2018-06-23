@@ -4,6 +4,17 @@ La carte retournée doit afficher une image. 🎨
 
 ![setup](images/fruit.png)
 
+## Notions à utiliser
+
+### CSS
+
+- [Découper une image de type "sprites" en CSS](https://www.alsacreations.com/tuto/lire/1068-sprites-css-background-position.html) [#](https://github.com/O-clock-Galaxy/correction-evaluation-js-memory/blob/master/js/app.js#L125)
+
+### JavaScript
+
+- [Mélanger un tableau](https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array) [#](https://github.com/O-clock-Galaxy/correction-evaluation-js-memory/blob/master/js/app.js#L299)
+- [Modifier le style d'un élément DOM avec jQuery](http://api.jquery.com/css/) [#](https://github.com/O-clock-Galaxy/correction-evaluation-js-memory/blob/master/js/app.js#L125)
+
 ## Instructions
 
 ### La pomme
@@ -25,10 +36,3 @@ Si on les stocke dans un array avant de les rajouter au plateau, il suffit de m�
 --
 
 La suite : [Une paire](4_une-paire.md)
-
----
-
-## Help
-
-* http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
-* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Images/Sprites_CSS

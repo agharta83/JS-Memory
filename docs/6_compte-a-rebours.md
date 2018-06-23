@@ -4,6 +4,14 @@ Le jeu est un peu trop simple, rajoutons une petite dose de stress à notre joue
 
 ![setup](images/perdu.png)
 
+## Notions à utiliser
+
+### JavaScript
+
+- [Animation avec jQuery](http://api.jquery.com/animate/) [#](https://github.com/O-clock-Galaxy/correction-evaluation-js-memory/blob/master/js/app.js#L44)
+
+---
+
 ## Instructions
 
 Le joueur a une minute pour retourner toutes les cartes du plateau.  

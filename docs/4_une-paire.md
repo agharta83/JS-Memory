@@ -4,6 +4,13 @@ Lors du deuxième click, il faut vérifier si les cartes qui viennent d’être 
 
 ![setup](images/fruits.png)
 
+## Notions à utiliser
+
+### JavaScript
+
+- [Conditions `if`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
+- [Exécuter un code après laps de temps](https://developer.mozilla.org/fr/docs/Web/API/WindowTimers/setTimeout) [#](https://github.com/O-clock-Galaxy/correction-evaluation-js-memory/blob/master/js/app.js#L226)
+
 ## Instructions
 
 * Il faut tester si les deux cartes ont la même image.
@@ -18,9 +25,3 @@ Lors du deuxième click, il faut vérifier si les cartes qui viennent d’être 
 --
 
 La suite : [Veni, vidi, vici](5_veni-vedi-vici.md)
-
----
-
-## Help
-
-* https://developer.mozilla.org/fr/docs/Web/API/WindowTimers/setTimeout
